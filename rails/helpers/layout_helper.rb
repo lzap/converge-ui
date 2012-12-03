@@ -15,3 +15,8 @@ module LayoutHelper
     _("No Template")
   end
 end
+
+# hack to make converge_ui running on JRuby 1.7+
+module ConvergeUi::LayoutHelper
+  include LayoutHelper
+end
